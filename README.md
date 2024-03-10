@@ -31,7 +31,14 @@ source ~/.profile
 
 ```
 
-Second, run the development server:
+Second, move project folder and install dependencies.
+```bash
+cd ./smilegate_fe
+
+pnpm install
+```
+
+Third, run the development server:
 
 ```bash
 # develop

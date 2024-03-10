@@ -2,7 +2,7 @@
 
 See below for mono-repo structure.
 
-```shell
+```bash
 - apps
   - admin
 - packages
@@ -12,7 +12,26 @@ See below for mono-repo structure.
 
 ## Getting Started
 
-First, run the development server:
+First, install nvm, node.js and pnpm globally.
+```bash
+nvm use 18.18.0
+
+node -v
+# v18.18.0
+
+npm install --global pnpm@8.15.4
+
+pnpm setup
+
+source ~/.zshrc
+# or
+source ~/.bashrc
+# or
+source ~/.profile
+
+```
+
+Second, run the development server:
 
 ```bash
 # develop

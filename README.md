@@ -13,6 +13,7 @@ See below for mono-repo structure.
 ## Getting Started
 
 First, install nvm, node.js and pnpm globally.
+
 ```bash
 nvm use 18.18.0
 
@@ -32,6 +33,7 @@ source ~/.profile
 ```
 
 Second, move project folder and install dependencies.
+
 ```bash
 cd ./smilegate_fe
 

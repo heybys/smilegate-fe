@@ -7,15 +7,14 @@
     "allowJs": true,
     "declaration": true,
     "declarationMap": true,
-    "baseUrl": "./",
 
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "Bundler",
     "incremental": false,
     "esModuleInterop": true,
-    "isolatedModules": true,
     "skipLibCheck": true,
+    "isolatedModules": true,
     "resolveJsonModule": true,
 
     "strict": true,
@@ -23,6 +22,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

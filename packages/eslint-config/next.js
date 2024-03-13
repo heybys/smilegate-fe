@@ -10,7 +10,7 @@ module.exports = {
     'plugin:react/recommended',
     'next/core-web-vitals',
   ],
-  parser:'@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser',
   globals: {
     React: true,
     JSX: true,

@@ -7,8 +7,8 @@
     "prebuild": "next telemetry disable",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --max-warnings 0",
-    "lint-fix": "eslint . --max-warnings 0 --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix --ext",
     "clean": "rm -rf ./node_modules && rm -rf ./.next && rm -rf ./.turbo"
   },
   "dependencies": {

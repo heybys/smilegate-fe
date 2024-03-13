@@ -6,12 +6,11 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 module.exports = {
   extends: [
     'eslint:recommended',
-    'next',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
     'next/core-web-vitals',
-    'prettier',
-    'airbnb-base',
   ],
-  plugins: ['only-warn'],
+  parser:'@typescript-eslint/parser',
   globals: {
     React: true,
     JSX: true,
@@ -29,7 +28,7 @@ module.exports = {
   },
   ignorePatterns: [
     // Ignore dotfiles
-    '.*.js',
+    '.turbo/',
     'node_modules/',
     '.next/',
   ],

@@ -4,8 +4,12 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ['eslint:recommended', 'prettier', 'airbnb-base'],
-  plugins: ['only-warn'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended'
+  ],
+  parser:'@typescript-eslint/parser',
   globals: {
     React: true,
     JSX: true,
@@ -22,7 +26,7 @@ module.exports = {
   },
   ignorePatterns: [
     // Ignore dotfiles
-    '.*.js',
+    '.turbo/',
     'node_modules/',
     'dist/',
   ],

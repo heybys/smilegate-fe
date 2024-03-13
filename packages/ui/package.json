@@ -10,8 +10,8 @@
     "registry": "http://localhost:18081/repository/react-lib-release"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "lint-fix": "eslint . --max-warnings 0 --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix --ext",
     "build": "tsc && vite build",
     "clean": "rm -rf ./node_modules && rm -rf ./.turbo && rm -rf ./dist"
   },

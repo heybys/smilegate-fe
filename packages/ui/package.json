@@ -1,10 +1,13 @@
 {
   "name": "@repo/ui",
   "version": "0.1.0",
-  "private": true,
+  "type": "module",
   "exports": {
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:18081/repository/react-lib-release"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -23,5 +26,6 @@
     "typescript": "5.3.3",
     "vite": "5.1.3",
     "vite-plugin-dts": "^3.7.3"
-  }
+  },
+  "packageManager": "pnpm@8.15.4"
 }

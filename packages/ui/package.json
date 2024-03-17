@@ -9,6 +9,7 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "exports": {
+    "./*": "./src/index.tsx",
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.es.js",
@@ -22,6 +23,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --ext .js,.ts,.tsx ./src",
     "build": "tsc && vite build",
+    "pack": "pnpm pack",
     "clean": "rm -rf ./node_modules && rm -rf ./.turbo && rm -rf ./dist"
   },
   "dependencies": {

@@ -6,19 +6,17 @@
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/common-ui.cjs.js",
-  "module": "./dist/common-ui.es.js",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
   "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/common-ui.es.js",
-      "require": "./dist/common-ui.cjs.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
     }
   },
   "publishConfig": {
-    "registry": "http://localhost:18081/repository/react-lib-release"
+    "@repo/ui:registry": "http://localhost:18081/repository/react-lib-release"
   },
   "scripts": {
     "lint": "eslint .",

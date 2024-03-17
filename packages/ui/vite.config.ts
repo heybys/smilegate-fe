@@ -11,9 +11,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.tsx'),
-      name: 'common-ui',
+      name: '@repo/ui',
       formats: ['es', 'cjs'],
-      fileName: (format) => `common-ui.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       onwarn: (warning, defaultHandler) => {

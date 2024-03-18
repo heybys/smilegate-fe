@@ -26,6 +26,9 @@
     "deploy": {},
     "clean": {
       "dependsOn": ["^clean"]
+    },
+    "clean:build": {
+      "dependsOn": ["^clean:build"]
     }
   }
 }

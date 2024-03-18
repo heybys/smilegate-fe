@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --ext .js,.ts,.tsx .",
-    "clean": "rm -rf ./node_modules && rm -rf ./.next && rm -rf ./.turbo"
+    "clean": "rm -rf ./node_modules && pnpm clean:build",
+    "clean:build": "rm -rf ./.next && rm -rf ./.turbo"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",

@@ -10,6 +10,7 @@
     "start": "turbo start",
     "deploy": "turbo deploy",
     "clean": "turbo clean && rm -rf ./node_modules && rm -rf ./.turbo",
+    "clean:build": "turbo clean:build && rm -rf ./.turbo",
     "format": "prettier --write \"**/*.{js,json,ts,tsx,md}\""
   },
   "devDependencies": {

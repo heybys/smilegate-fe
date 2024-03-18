@@ -17,7 +17,7 @@
     }
   },
   "publishConfig": {
-    "@repo/ui:registry": "http://localhost:18081/repository/react-lib-release"
+    "registry": "http://localhost:18081/repository/react-lib-release"
   },
   "scripts": {
     "lint": "eslint .",

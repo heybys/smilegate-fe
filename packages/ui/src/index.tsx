@@ -1,3 +1,4 @@
 export { Button } from './button';
 export { Card } from './card';
-export { SampleMovieList } from './sample-movie-list';
+export { SsrMovieList } from './ssr-movie-list';
+export { CsrMovieList } from './csr-movie-list';

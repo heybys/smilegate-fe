@@ -25,7 +25,8 @@
     "build": "tsc && vite build",
     "pack": "pnpm pack",
     "clean": "rm -rf ./node_modules && pnpm clean:build",
-    "clean:build": "rm -rf ./dist && rm -rf ./.turbo"
+    "clean:build": "rm -rf ./dist && rm -rf ./.turbo",
+    "prepublish": ""
   },
   "dependencies": {
     "react": "^18.2.0"

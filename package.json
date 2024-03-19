@@ -9,6 +9,8 @@
     "build": "turbo build",
     "start": "turbo start",
     "deploy": "turbo deploy",
+    "publish:release": "turbo publish:release",
+    "publish:snapshot": "turbo publish:snapshot",
     "clean": "turbo clean && rm -rf ./node_modules && rm -rf ./.turbo",
     "clean:build": "turbo clean:build && rm -rf ./.turbo",
     "format": "prettier --write \"**/*.{js,json,ts,tsx,md}\""

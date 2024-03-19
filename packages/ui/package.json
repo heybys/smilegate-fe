@@ -16,17 +16,14 @@
       "require": "./dist/index.cjs.js"
     }
   },
-  "publishConfig": {
-    "registry": "http://localhost:18081/repository/react-lib-release"
-  },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --ext .js,.ts,.tsx ./src",
     "build": "tsc && vite build",
-    "pack": "pnpm pack",
+    "publish:release": "pnpm publish --no-git-checks --registry=http://localhost:18081/repository/react-lib-release/",
+    "publish:snapshot": "pnpm publish --no-git-checks --registry=http://localhost:18081/repository/react-lib-snapshot/",
     "clean": "rm -rf ./node_modules && pnpm clean:build",
-    "clean:build": "rm -rf ./dist && rm -rf ./.turbo",
-    "prepublish": ""
+    "clean:build": "rm -rf ./dist && rm -rf ./.turbo"
   },
   "dependencies": {
     "react": "^18.2.0"

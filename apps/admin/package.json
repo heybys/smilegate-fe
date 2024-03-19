@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "local": "env-cmd -f .env.on-local next dev",
     "prebuild": "next telemetry disable",
-    "build": "next build",
-    "start": "next start",
+    "build:local": "env-cmd -f .env.on-local next build",
+    "build:dev": "env-cmd -f .env.development next build",
+    "build:stg": "env-cmd -f .env.stage next build",
+    "build:prod": "env-cmd -f .env.production next build",
+    "start:local": "env-cmd -f .env.on-local next start",
+    "start:dev": "env-cmd -f .env.development next start",
+    "start:stg": "env-cmd -f .env.stage next start",
+    "start:prod": "env-cmd -f .env.production next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --ext .js,.ts,.tsx .",
     "clean": "rm -rf ./node_modules && pnpm clean:build",
@@ -19,12 +25,13 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "typescript": "5.3.3",
+    "env-cmd": "^10.1.0",
+    "@next/eslint-plugin-next": "13.4.13",
+    "@types/node": "18.18.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "@types/node": "18.18.0",
     "eslint-config-next": "13.4.13",
-    "@next/eslint-plugin-next": "13.4.13"
+    "typescript": "5.3.3"
   },
   "packageManager": "pnpm@8.15.4"
 }

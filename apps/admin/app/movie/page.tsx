@@ -1,4 +1,4 @@
-import { CsrMovieList, SsrMovieList } from '@repo/ui/*';
+import { CsrMovieList, SsrMovieList } from '@repo/ui';
 import styles from './page.module.css';
 
 export default async function Movie() {

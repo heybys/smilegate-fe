@@ -9,12 +9,14 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "exports": {
-    "./*": "./src/index.tsx",
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js"
-    }
+    ".": [
+      "./src/index.tsx",
+      {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.es.js",
+        "require": "./dist/index.cjs.js"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",

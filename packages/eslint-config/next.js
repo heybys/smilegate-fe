@@ -32,6 +32,7 @@ module.exports = {
   ignorePatterns: [
     // Ignore dotfiles
     'coverage',
+    'jest.*.js',
     '.*.js',
     '.turbo/',
     'node_modules/',

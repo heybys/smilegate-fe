@@ -19,11 +19,13 @@
     "publish:snapshot": "turbo publish:snapshot",
     "clean": "turbo clean && rm -rf ./node_modules && rm -rf ./.turbo",
     "clean:build": "turbo clean:build && rm -rf ./.turbo",
-    "format": "prettier --write \"**/*.{js,json,ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{js,json,ts,tsx,md}\"",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "husky": "^9.0.11",
     "prettier": "3.2.5",
     "turbo": "^1.12.4"
   },

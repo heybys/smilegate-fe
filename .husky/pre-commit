@@ -3,4 +3,6 @@
 
 pnpm test
 
+pnpm lint
+
 echo hello pre-commit

@@ -1,12 +1,13 @@
 /**
  * @jest-environment jsdom
  */
-// import { render, screen } from '@testing-library/react';
-// import Movie from './page';
-//
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Movie from './page';
+
 it('App Router: Works with Client Components (React State)', () => {
-  //   render(<Movie />);
-  //   expect(screen.getByRole("heading")).toHaveTextContent("movie-list page");
-  //   // fireEvent.click(screen.getByRole("button"));
-  //   // expect(screen.getByRole("heading")).toHaveTextContent("1");
+  render(<Movie />);
+  expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent(
+    'movie-list page',
+  );
 });

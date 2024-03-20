@@ -1,9 +1,8 @@
 import React from 'react';
 
-interface CardProps {
+interface CardProps extends React.PropsWithChildren {
   className?: string;
   title: string;
-  children: React.ReactNode;
   href: string;
 }
 

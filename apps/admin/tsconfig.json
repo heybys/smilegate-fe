@@ -1,8 +1,8 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "types": ["@testing-library/jest-dom"],
+    "baseUrl": ".",
     "paths": {
       "@app/*": ["app/*"],
       "@public/*": ["public/*"]
@@ -11,6 +11,7 @@
   "include": [
     "next-env.d.ts",
     "next.config.js",
+    "jest.setup.js",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"

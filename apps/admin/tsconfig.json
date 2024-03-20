@@ -2,17 +2,19 @@
   "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "types": ["@testing-library/jest-dom"],
     "paths": {
       "@app/*": ["app/*"],
       "@public/*": ["public/*"]
     }
   },
   "include": [
+    "jest.*.ts",
     "next-env.d.ts",
     "next.config.js",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", ".turbo"]
+  "exclude": ["node_modules", ".turbo", "coverage"]
 }

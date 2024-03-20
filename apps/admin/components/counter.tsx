@@ -11,8 +11,8 @@ const SecondaryButton = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
-export function Counter() {
-  const [count, setCount] = useState<number>(0);
+export function Counter({ initCount }: { initCount: number }) {
+  const [count, setCount] = useState<number>(initCount);
   const increase = () => {
     setCount(count + 1);
   };

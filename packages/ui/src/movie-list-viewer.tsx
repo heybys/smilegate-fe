@@ -1,14 +1,16 @@
-interface Response {
+'use client';
+
+export interface MovieListResultResponse {
   movieListResult: MovieListResult;
 }
 
-interface MovieListResult {
+export interface MovieListResult {
   totCnt: number;
   source: string;
   movieList: Movie[];
 }
 
-interface Movie {
+export interface Movie {
   movieCd: string;
   movieNm: string;
   movieNmEn: string;
@@ -24,28 +26,23 @@ interface Movie {
   companys: Company[];
 }
 
-interface Director {
+export interface Director {
   peopleNm: string;
 }
 
-interface Company {
+export interface Company {
   companyCd: string;
   companyNm: string;
 }
 
-async function getData() {
-  const res = await fetch(
-    'http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=f5eef3421c602c6cb7ea224104795888',
-  );
-  return res.json() as Promise<Response>;
+interface MovieListViewerProps {
+  data: MovieListResultResponse;
 }
 
-export async function SsrMovieList() {
-  const data = await getData();
-
+export function MovieListViewer({ data }: MovieListViewerProps) {
   return (
     <>
-      {data?.movieListResult?.movieList?.map((movie) => (
+      {data.movieListResult?.movieList?.map((movie) => (
         <div key={movie.movieCd}>{movie.movieNm}</div>
       ))}
     </>

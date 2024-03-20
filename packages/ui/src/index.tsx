@@ -1,4 +1,10 @@
 export { Button } from './button';
 export { Card } from './card';
-export { SsrMovieList } from './ssr-movie-list';
-export { CsrMovieList } from './csr-movie-list';
+export { MovieListViewer } from './movie-list-viewer';
+export type {
+  MovieListResultResponse,
+  MovieListResult,
+  Movie,
+  Company,
+  Director,
+} from './movie-list-viewer';

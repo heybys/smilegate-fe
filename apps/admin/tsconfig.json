@@ -5,7 +5,9 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["app/*"],
-      "@public/*": ["public/*"]
+      "@components/*": ["components/*"],
+      "@public/*": ["public/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": [

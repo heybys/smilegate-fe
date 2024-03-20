@@ -1,11 +1,14 @@
-import styles from './page.module.css';
-import { Counter } from '../../components/counter';
+import { getData } from '@app/utils/data';
+import { Counter } from '@components/counter';
+import { MovieListViewer } from '@repo/ui';
 
-export default function Movie() {
+export default async function Movie() {
+  const data = await getData();
   return (
-    <div className={styles.page}>
-      <h3>movie-list page</h3>
-      <Counter />
-    </div>
+    <>
+      <h1>movie-list page</h1>
+      <MovieListViewer data={data} />
+      <Counter initCount={data?.movieListResult?.totCnt} />
+    </>
   );
 }

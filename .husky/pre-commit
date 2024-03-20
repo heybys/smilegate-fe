@@ -1,10 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm format
-
-lint-staged
-
 # 현재 체크아웃된 브랜치
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 # 커밋하면 안되는 브랜치
@@ -23,5 +19,9 @@ then
   echo "--------------------------------------------"
   exit 1
 fi
+
+pnpm format
+
+./node_modules/.bin/lint-staged
 
 exit 0

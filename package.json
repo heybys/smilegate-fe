@@ -34,6 +34,11 @@
   "engines": {
     "node": ">=18"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/.bin/lint-staged"
+    }
+  },
   "lint-staged": {
     "relative": [
       "apps/**/package.json",

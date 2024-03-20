@@ -4,7 +4,7 @@
   "scripts": {
     "local": "turbo local",
     "test": "turbo test",
-    "lint": "pnpm run format && turbo lint",
+    "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "build:local": "turbo build:local",
     "build:dev": "turbo build:dev",

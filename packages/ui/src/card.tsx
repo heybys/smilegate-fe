@@ -1,16 +1,13 @@
 import React from 'react';
 
-export function Card({
-  className,
-  title,
-  children,
-  href,
-}: {
+interface CardProps {
   className?: string;
   title: string;
   children: React.ReactNode;
   href: string;
-}): JSX.Element {
+}
+
+export function Card({ className, title, children, href }: CardProps) {
   return (
     <a
       className={className}

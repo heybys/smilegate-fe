@@ -31,7 +31,7 @@ interface DailyBoxOffice {
   showCnt: string;
 }
 
-export const CsrMovieList = () => {
+export function CsrMovieList() {
   const [movies, setMovies] = useState<DailyBoxOffice[]>([]);
 
   useEffect(() => {
@@ -51,4 +51,4 @@ export const CsrMovieList = () => {
         : movies.map((movie) => <div key={movie.rank}>{movie.movieNm}</div>)}
     </>
   );
-};
+}

@@ -26,11 +26,18 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "3.2.5",
     "turbo": "^1.12.4"
   },
   "packageManager": "pnpm@8.15.4",
   "engines": {
     "node": ">=18"
+  },
+  "lint-staged": {
+    "relative": [
+      "apps/**/package.json",
+      "packages/**/package.json"
+    ]
   }
 }

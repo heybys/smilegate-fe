@@ -1,6 +1,8 @@
 import { CsrMovieList, SsrMovieList } from '@repo/ui';
 import styles from './page.module.css';
 
+// interface MovieProps {}
+
 export default async function Movie() {
   return (
     <div className={styles.page}>

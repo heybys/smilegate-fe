@@ -4,7 +4,7 @@
 # 현재 체크아웃된 브랜치
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 # 커밋하면 안되는 브랜치
-PROTECTED_BRANCHES="^(master|develop)"
+PROTECTED_BRANCHES="^(main|master|develop)"
 
 echo "current branch: $BRANCH"
 echo "protected branches: $PROTECTED_BRANCHES"
@@ -20,7 +20,7 @@ then
   exit 1
 fi
 
-pnpm format
+pnpm run format
 
 ./node_modules/.bin/lint-staged
 

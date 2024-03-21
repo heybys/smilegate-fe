@@ -1,4 +1,4 @@
-import { getData } from '@app/utils/data';
+import { getData } from '@utils/data';
 import { Counter } from '@components/counter';
 import { MovieListViewer } from '@repo/ui';
 

@@ -11,17 +11,17 @@ export interface MovieListResult {
 }
 
 export interface Movie {
-  movieCd: string;
-  movieNm: string;
-  movieNmEn: string;
-  prdtYear: string;
-  openDt: string;
-  typeNm: string;
-  prdtStatNm: string;
-  nationAlt: string;
-  genreAlt: string;
-  repNationNm: string;
-  repGenreNm: string;
+  movieCd?: string;
+  movieNm?: string;
+  movieNmEn?: string;
+  prdtYear?: string;
+  openDt?: string;
+  typeNm?: string;
+  prdtStatNm?: string;
+  nationAlt?: string;
+  genreAlt?: string;
+  repNationNm?: string;
+  repGenreNm?: string;
   directors: Director[];
   companys: Company[];
 }
@@ -42,6 +42,7 @@ interface MovieListViewerProps {
 export function MovieListViewer({ data }: MovieListViewerProps) {
   return (
     <>
+      <div>total : {data.movieListResult?.totCnt}</div>
       {data.movieListResult?.movieList?.map((movie) => (
         <div key={movie.movieCd}>{movie.movieNm}</div>
       ))}

@@ -19,7 +19,7 @@ const StyledPage = styled.div`
   height: 500px;
   padding: 30px;
   background-color: aqua;
-`
+`;
 
 const ClockArea = styled.div`
   display: flex;
@@ -31,13 +31,13 @@ const ClockArea = styled.div`
   width: 250px;
   min-height: 50px;
   background-color: white;
-`
+`;
 
 const Title = styled.div`
   padding: 10px;
   font-size: 24px;
   font-weight: bold;
-`
+`;
 
 export default function Page() {
   return (

@@ -15,6 +15,11 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // The test environment that will be used for testing
   testEnvironment: 'jest-environment-node',
+  moduleNameMapper: {
+    '^@app/(.*)$': '<rootDir>/app/$1',
+    '^@components/(.*)$': '<rootDir>/components/$1',
+    '^@utils/(.*)$': '<rootDir>/utils/$1',
+  },
 };
 
 module.exports = createJestConfig(customJestConfig);

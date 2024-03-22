@@ -1,5 +1,8 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { MovieListResultResponse, MovieListViewer } from './movie-list-viewer';
 
 const data: MovieListResultResponse = {
@@ -17,7 +20,18 @@ const data: MovieListResultResponse = {
   },
 };
 
-test('render', () => {
-  render(<MovieListViewer data={data} />);
-  // expect(screen)..toBeTruthy();
+describe('Movie List Viewer', () => {
+  test('render', () => {
+    render(<MovieListViewer data={data} />);
+    const totalElement = screen.getByText(/total :/i);
+    expect(totalElement).toBeInTheDocument();
+  });
+
+  it('should have total count', async () => {
+    render(<MovieListViewer data={data} />);
+    const totalElement = screen.getByText(/total :/i);
+    expect(totalElement).toHaveTextContent(
+      data.movieListResult.totCnt.toString(),
+    );
+  });
 });

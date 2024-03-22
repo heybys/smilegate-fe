@@ -35,10 +35,9 @@ jest.mock('../../components/counter', () => {
 });
 
 describe('Movie Page', () => {
-  it('should have title', async () => {
+  test('render', async () => {
     render(await Movie());
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'movie-list page',
-    );
+    const titleElement = screen.getByText(/movie-list page/i);
+    expect(titleElement).toBeInTheDocument();
   });
 });

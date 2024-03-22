@@ -16,7 +16,6 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --ext .js,.ts,.tsx .",
     "test": "jest",
-    "test:ci": "jest --ci",
     "clean": "rm -rf ./node_modules && rm -rf .swc && rm -rf __tests__ && pnpm clean:build",
     "clean:build": "rm -rf ./.next && rm -rf ./.turbo"
   },

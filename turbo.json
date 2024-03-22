@@ -41,10 +41,7 @@
     "start:prod": {
       "dependsOn": ["build:prod"]
     },
-    "test": {
-      "dependsOn": ["@repo/ui#build"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
-    },
+    "test": {},
     "deploy": {},
     "publish:release": {
       "dependsOn": ["@repo/ui#build"]

@@ -5,7 +5,18 @@ See below for mono-repo structure.
 ```bash
 - apps
   - admin
+    - app # include pages
+    - components # common components
+    - hooks # common hooks
+    - libs # external libraries. Typically managed in package.json
+    - public # static resources
+    - services # Typically api request...
+    - states # global state
+    - styles # style related component and settings
+    - types # type declaration
+    - utils # In general, set of pure functions.
 - packages
+  - eslint-config
   - typescript-config
   - ui
 ```
@@ -43,17 +54,19 @@ pnpm install
 Third, run the development server:
 
 ```bash
-# develop
-pnpm dev
+# develop in local
+pnpm local
 # test
 pnpm test
 # lint
 pnpm lint
-# build
-pnpm build
+# prettier format
+pnpm format
+# build local|dev|stg|prod
+pnpm build:local
 # deploy
 pnpm deploy
-# clean
+# clean or clean:build
 pnpm clean
 ```
 

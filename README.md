@@ -11,7 +11,7 @@ See below for mono-repo structure.
     - libs # external libraries. Typically managed in package.json
     - public # static resources
     - services # Typically api request...
-    - states # global state
+    - store # global store
     - styles # style related component and settings
     - types # type declaration
     - utils # In general, set of pure functions.

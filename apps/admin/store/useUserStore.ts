@@ -15,7 +15,7 @@ const initialUserInfo: UserInfo = { profileUrl: '', nickname: '' };
 const useUserStore = create<UserInfo | UserActions>((set) => ({
   userInfo: initialUserInfo,
   setUserState: (userInfo: UserInfo) => {
-    set({ nickname:userInfo.nickname + 'hoho'});
+    set(userInfo);
   },
   deleteUserState: () => {
     set(initialUserInfo);

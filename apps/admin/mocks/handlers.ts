@@ -25,8 +25,8 @@ const movieListResultResponse: MovieListResultResponse = {
         directors: [],
         companys: [],
       },
-    ]
-  }
+    ],
+  },
 };
 const todos = ['숙제하기', '넷플릭스보기', '청소하기'];
 

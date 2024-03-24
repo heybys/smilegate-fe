@@ -11,7 +11,7 @@
 import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 
-const ClockWithNoSSR = dynamic(() => import('@components/clock'), {
+const ClockWithNoSSR = dynamic(() => import('@components/Clock'), {
   ssr: false,
 });
 

@@ -1,4 +1,4 @@
-import { getData } from './data';
+import { getMovieList } from '@utils/data';
 
 beforeEach(() => {
   jest.spyOn(global, 'fetch').mockResolvedValue({
@@ -11,6 +11,6 @@ afterEach(() => {
 });
 
 test('Test functions', async () => {
-  const response = await getData();
+  const response = await getMovieList();
   expect(response.movieListResult.totCnt).toEqual(313);
 });

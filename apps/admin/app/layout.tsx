@@ -1,20 +1,23 @@
 'use client';
 
 import './globals.css';
-import React from 'react';
-import StyledComponentsRegistry from '@styles/registry';
+import { PropsWithChildren } from 'react';
+import { ThemeProvider } from 'styled-components';
+import MockServiceWorkerProvider from '@mocks/provider/MockServiceWorkerProvider';
+import StyledComponentsRegistry from '@styles/StyledComponentsRegistry';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
-import { ThemeProvider } from 'styled-components';
 
-export default function RootLayout({ children }: React.PropsWithChildren) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html>
       <body>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        </StyledComponentsRegistry>
+        <MockServiceWorkerProvider>
+          <StyledComponentsRegistry>
+            <GlobalStyles />
+            <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          </StyledComponentsRegistry>
+        </MockServiceWorkerProvider>
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ import { render, screen } from '@testing-library/react';
 import Movie from './page';
 
 jest.mock('../../utils/data', () => ({
-  getData: () =>
+  getMovieList: () =>
     Promise.resolve({
       movieListResult: {
         totCnt: 100, // 가짜 응답 데이터

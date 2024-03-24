@@ -7,7 +7,9 @@
       "@app/*": ["app/*"],
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
+      "@mocks/*": ["mocks/*"],
       "@public/*": ["public/*"],
+      "@store/*": ["store/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"]
     }

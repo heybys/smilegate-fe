@@ -8,6 +8,7 @@ See below for mono-repo structure.
     - app # include pages
     - components # common components
     - hooks # common hooks
+    - mocks # related mocks (e.g. msw)
     - libs # external libraries. Typically managed in package.json
     - public # static resources
     - services # Typically api request...
@@ -54,6 +55,8 @@ pnpm install
 Third, run the development server:
 
 ```bash
+# run express mock server for msw (ssr component)
+pnpm mock
 # develop in local
 pnpm local
 # test

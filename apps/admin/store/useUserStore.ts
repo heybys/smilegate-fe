@@ -1,26 +1,24 @@
 import { create } from 'zustand';
 
-interface UserInfo {
+interface UserState {
   profileUrl: string;
   nickname: string;
 }
 
 interface UserActions {
-  setUserInfo: (userInfo: UserInfo) => void;
-  initializeUserInfo: () => void;
+  setUserState: (userState: UserState) => void;
+  initializeUserState: () => void;
 }
 
-type UserState = UserInfo & UserActions;
+const initialUserState: UserState = { profileUrl: '', nickname: '' };
 
-const initialUserInfo: UserInfo = { profileUrl: '', nickname: '' };
-
-const useUserStore = create<UserState>((set) => ({
-  ...initialUserInfo,
-  setUserInfo: (userInfo: UserInfo) => {
-    set({ ...userInfo });
+const useUserStore = create<UserState & UserActions>((set) => ({
+  ...initialUserState,
+  setUserState: (userState: UserState) => {
+    set({ ...userState });
   },
-  initializeUserInfo: () => {
-    set(initialUserInfo);
+  initializeUserState: () => {
+    set(initialUserState);
   },
 }));
 

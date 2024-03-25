@@ -6,18 +6,20 @@ interface UserInfo {
 }
 
 interface UserActions {
-  setUserState: (userInfo: UserInfo) => void;
-  deleteUserState: () => void;
+  setUserInfo: (userInfo: UserInfo) => void;
+  initializeUserInfo: () => void;
 }
+
+type UserState = UserInfo & UserActions;
 
 const initialUserInfo: UserInfo = { profileUrl: '', nickname: '' };
 
-const useUserStore = create<UserInfo | UserActions>((set) => ({
-  userInfo: initialUserInfo,
-  setUserState: (userInfo: UserInfo) => {
-    set(userInfo);
+const useUserStore = create<UserState>((set) => ({
+  ...initialUserInfo,
+  setUserInfo: (userInfo: UserInfo) => {
+    set({ ...userInfo });
   },
-  deleteUserState: () => {
+  initializeUserInfo: () => {
     set(initialUserInfo);
   },
 }));

@@ -1,4 +1,4 @@
-# Smilegate FrontEnd
+# Turbo with Next.js
 
 See below for mono-repo structure.
 
